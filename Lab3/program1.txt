@@ -1,0 +1,12 @@
+public class Circle{ public static void main(String[] args) {
+        double radius, area, perim, pi;
+        pi = 14/100 + 3;
+        radius = read();
+        area = pi * radius;
+        area = area * radius;
+        perim = 2 * pi;
+        perim = perim * radius;
+        print(area);
+        print(perim);
+    }
+}

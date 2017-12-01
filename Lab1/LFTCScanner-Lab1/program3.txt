@@ -1,0 +1,16 @@
+public class SumN
+{
+    public static void main(String [] args)
+    {
+        int sum,n,nr;
+        sum=0;
+        n=read();
+        while(n!=0)
+        {
+            nr=read() ;
+            sum=sum+nr;
+            n=n-1;
+        }
+        print(sum) ;
+    }
+}

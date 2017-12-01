@@ -1,0 +1,22 @@
+<program> ::= <imports> <class>
+<imports> ::= import <package>;
+<package> ::= <letters> | <letters> . <package> ;
+<letters> ::= <letter> <letters>
+<letter> ::= "a"|"b"|...|"z"
+<class> ::= public class <className> { <mainfunction> } | class <className> { <mainfunction> }
+<mainfunction> ::= public static void main(String[] args) { <content> }
+<content> ::= <declarations> <scannerstmt> <listofstmt>
+<declarations> ::= <type> <listvar>; | <type> <listvar>; <declarations>
+<listvar> ::= <letters> | <letters>, <listvar>
+<type> :== int | double | boolean | <class>
+<listofstmt> ::= <stmt>; | <stmt> ; <listofstmt>
+<stmt> ::= <assignstmt> | <inputstmt> | <outputstmt> | <condstmt> | <loopstmt>
+<scannerstmt> ::= Scanner scanner = new Scanner(System.in);
+<assignstmt> ::= <letters>  = <expr> | <letters> = <expr> <operator> <expr>
+<expr> ::= <letters> | <value>
+<value> ::= 0|1|....|9|
+<operator> ::= +|-|*|/|>|!=|==
+<inputstmt> ::= <letters> = scanner.nextInt(); | <letters> = scanner.nextDouble();
+<outputstmt> ::= System.out.println("<letters>" + letters)
+<condstmt> ::= if( <expr> <operator> <expr>) { <listofstmt> } | if( <expr> <operator> <expr>) { <listofstmt> } else { <listofstmt>}
+<loopstmt> ::= while( <expr> <operator> <expr>) { <listofstmt> }
